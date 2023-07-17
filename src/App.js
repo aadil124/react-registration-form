@@ -1,25 +1,69 @@
-import logo from './logo.svg';
-import './App.css';
+import RegistrationForm from "./components/RegistrationForm";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <RegistrationForm />;
 }
 
 export default App;
+
+
+//    <h1>Registration Form</h1>
+//    <form onSubmit={submitHandle}>
+//      <label>
+//        Name:
+//        <input
+//          type="text"
+//          value={inputValue.name}
+//          name="name"
+//          onChange={onChangeHandle}
+//        />
+//      </label>
+//      <br />
+//      <br />
+//      <label>
+//        Age:
+//        <input
+//          type="number"
+//          value={inputValue.age}
+//          name="age"
+//          onChange={onChangeHandle}
+//        />
+//      </label>
+//      <br />
+//      <br />
+//      <label>
+//        Email:
+//        <input
+//          type="email"
+//          value={inputValue.email}
+//          name="email"
+//          onChange={onChangeHandle}
+//        />
+//      </label>
+//      <br />
+//      <br />
+//      <label>
+//        Password:
+//        <input
+//          type="password"
+//          value={inputValue.password}
+//          name="password"
+//          onChange={onChangeHandle}
+//        />
+//      </label>
+//      <br />
+//      <br />
+//      <label>
+//        Confirm Password:
+//        <input
+//          type="password"
+//          value={inputValue.cpassword}
+//          name="cpassword"
+//          onChange={onChangeHandle}
+//        />
+//      </label>
+//      <br />
+//      <br />
+//      <button type="submit">Submit</button>
+//    </form>
+//  </div>;
