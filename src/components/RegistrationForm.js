@@ -52,6 +52,38 @@ const RegistrationForm = () => {
     });
   };
 
+
+  //Delete functionality
+
+  const handleDelete = (index)=>{
+    // console.log("Deleted",index)
+    const deletedData = store.filter((item,id)=>{
+      // console.log("item",item,"number",num)
+      return id!==index 
+    })
+    console.log(deletedData)
+    setStore(deletedData)
+  }
+
+  //Edit Functionality 
+
+  const handleEdit = (index)=>{
+   console.log("Edit",index)
+   
+   const updatedData = store.map((item,id)=>{
+    console.log("item",item,"index==",index)
+    setInputValue((prevData)=>({
+      [item.name]:item.name,
+      // [inputValue.age]:item.age,
+      // [inputValue.email]:item.email,
+      // [inputValue.password]:item.password,
+      // [inputValue.cpassword]:item.cpassword,
+    }))
+
+    console.log(item.name)
+   })
+
+  }
   return (
     <>
       <body>
@@ -152,7 +184,7 @@ const RegistrationForm = () => {
           <h1>Show Details</h1>
 
           <div>
-            {visible ? <ShowData inputValue={inputValue} store={store}/> : null}
+            {visible ? <ShowData inputValue={inputValue} store={store} handleDelete={handleDelete} handleEdit={handleEdit}/> : null}
           </div>
         </div>
       </body>
