@@ -1,6 +1,13 @@
 import RegistrationForm from "./components/RegistrationForm";
+import UserList from "./components/custom-hooks/UserList";
 
-function App() {
-  return <RegistrationForm />;
-}
+const App = () => {
+  return (
+    <>
+      <RegistrationForm />
+      <UserList />
+    </>
+  );
+};
+
 export default App;
